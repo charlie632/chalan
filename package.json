@@ -1,0 +1,47 @@
+{
+  "name": "back-office",
+  "version": "1.0.0",
+  "description": "Back-office for web development final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index,js",
+    "build-css": "node-sass --include-path scss scss/main.scss src/app/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AplicacionesWeb2018/back-office.git"
+  },
+  "author": "KOTASEK",
+  "license": "ITESM-CEM",
+  "bugs": {
+    "url": "https://github.com/AplicacionesWeb2018/back-office/issues"
+  },
+  "homepage": "https://github.com/AplicacionesWeb2018/back-office#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.3.13",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.7.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "pug": "^2.0.3",
+    "sass": "^1.14.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.6",
+    "reload": "^2.3.1"
+  }
+}

@@ -1,0 +1,57 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous"
+/>
+<nav class="navbar navbar-expand navbar-pink static-top">
+  <a class="nav-bar-title mr-1" href="/">¡Ponte algo!</a>
+
+  <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Navbar -->
+  <ul class="navbar-nav nav-left">
+    <li class="nav-item">
+      <a class="menu-top" href="/tienda/women"> <span>Mujeres </span> </a>
+    </li>
+    <li class="nav-item">
+      <a class="menu-top" href="/tienda/men"> <span>Hombres </span> </a>
+    </li>
+    <li class="nav-item">
+      <a class="menu-top" href="/tienda/kids"> <span>Kids </span> </a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav nav-right">
+    <li class="nav-item">
+      <a class="menu-top" id="wishlist" href="#"> <i class="far fa-star"></i> </a>
+    </li>
+    <li class="nav-item">
+      <a class="menu-top" id="login" href="#"> <span>Iniciar sesión</span> </a>
+    </li>
+    <li class="nav-item">
+      <a class="menu-top" id="logout" href="#"> <span>Cerrar sesión</span> </a>
+    </li>
+  </ul>
+</nav>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script src="/vendor/jquery/jquery.min.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDw86uVM8uoTvC-a8u6VVO8py3P6B-w8-E",
+    authDomain: "firstproject-201220.firebaseapp.com",
+    databaseURL: "https://firstproject-201220.firebaseio.com",
+    projectId: "firstproject-201220",
+    storageBucket: "firstproject-201220.appspot.com",
+    messagingSenderId: "198696688513"
+  };
+  firebase.initializeApp(config);
+  console.log("ehh");
+</script>
+
+<script src="/scripts/main.js"></script>

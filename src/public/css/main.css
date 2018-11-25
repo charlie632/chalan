@@ -1,0 +1,217 @@
+/*!
+ * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper #content-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 80px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #fff;
+}
+
+.nav-bar-title {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  line-height: inherit;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-top {
+  color: #fff;
+  padding: 20px;
+}
+
+.menu-top:hover {
+  background-color: #fff;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.nav-bar-title:hover {
+  color: #fff;
+}
+.navbar-pink {
+  background-color: palevioletred;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0px;
+}
+
+.navbar-nav .nav-item .nav-link:focus {
+  outline: none;
+}
+
+.navbar-nav .nav-item .nav-link .badge {
+  position: absolute;
+  margin-left: 0.75rem;
+  top: 0.3rem;
+  font-weight: 400;
+  font-size: 0.5rem;
+}
+
+.nav-right {
+  display: flex;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-end;
+}
+.nav-left {
+  display: flex;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    overflow: auto;
+  }
+}
+
+.sidebar {
+  width: 120px !important;
+  background-color: #fff;
+  min-height: calc(100vh - 136px);
+  margin-right: 100px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.sidebar .nav-item {
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+}
+
+.sidebar .nav-item {
+  margin: 0 20px !important;
+}
+
+.sidebar .nav-item .nav-link {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  width: 90px;
+}
+
+.sidebar .nav-item .nav-link span {
+  font-size: 1.2rem;
+  display: block;
+}
+
+.sidebar .nav-item .dropdown-menu {
+  position: absolute !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  left: calc(90px + 0.5rem) !important;
+  margin: 0;
+}
+
+.sidebar .nav-item .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .nav-item:hover {
+  color: #ffff;
+  background-color: pink;
+}
+
+.sidebar .nav-item .nav-link:active,
+.sidebar .nav-item .nav-link:focus,
+.sidebar .nav-item .nav-link:hover {
+  /* color: #ffff;
+  background-color: pink; */
+}
+
+:root {
+  --input-padding-x: 0.75rem;
+  --input-padding-y: 0.75rem;
+}
+
+footer.sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100%);
+  height: 80px;
+  background-color: pink;
+}
+
+footer.sticky-footer .copyright {
+  line-height: 1;
+  font-size: 0.8rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 90%;
+  max-width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-card {
+  padding: 2px 16px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+#login {
+  float: right;
+  margin-left: auto !important;
+}
+
+#logout {
+  float: right;
+  margin-left: auto !important;
+  font-weight: bolder !important;
+}
+
+#wishlist {
+  float: right;
+  margin-left: auto !important;
+}
+
+body.sidebar-toggled footer.sticky-footer {
+  width: 100%;
+}
