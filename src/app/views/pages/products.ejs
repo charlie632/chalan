@@ -48,7 +48,7 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mt-4 text-center">
+        <div class="col-md-8 mt-4 text-center">
           <table id="productstable" class="table table-striped">
             <thead>
               <tr>
@@ -57,6 +57,7 @@
                 <th>Description</th>
                 <th>Category</th>
                 <th>Availability</th>
+                <th>URL</th>
               </tr>
             </thead>
             <tbody>
@@ -67,12 +68,13 @@
                 <td><%= products[i].description %></td>
                 <td><%= products[i].category %></td>
                 <td><%= products[i].status %></td>
+                <td><%= products[i].url %></td>
               </tr>
               <% } %>
             </tbody>
           </table>
         </div>
-        <div class="col-md-6 mt-4 card">
+        <div class="col-md-4 mt-4 card">
           <form action="/products" method="POST" class="card-body">
             <h3 class="card-title">Add product</h3>
             <div class="form-group">
