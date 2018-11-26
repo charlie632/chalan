@@ -216,6 +216,10 @@ footer.sticky-footer .copyright {
   float: right;
   margin-left: auto !important;
 }
+#ubicacion {
+  float: right;
+  margin-left: auto !important;
+}
 
 .add-wishlist {
   color: black;

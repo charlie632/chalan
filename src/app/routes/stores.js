@@ -25,6 +25,10 @@ module.exports = app => {
 
   handleDisconnect();
 
+  app.get("/ubicacion", (req, res) => {
+    res.render("pages/ubicacion");
+  });
+
   app.get("/", (req, res) => {
     connection.query("SELECT * FROM products", (err, result) => {
       console.log("from db", result);
