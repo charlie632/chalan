@@ -12,7 +12,7 @@ module.exports = app => {
       if (err.code === "PROTOCOL_CONNECTION_LOST") {
         handleDisconnect();
       } else {
-        throw err;
+        // throw err;
       }
     });
   }
@@ -49,6 +49,44 @@ module.exports = app => {
       (err, result) => {
         res.redirect("/pruebaprod");
       }
+    );
+  });
+
+  app.get("/checktables", (req, res) => {
+    connection.query("show tables", (err, result) => res.send(result));
+  });
+
+  app.get("/checkuser", (req, res) => {
+    connection.query("select * from client", (err, result) => res.send(result));
+  });
+
+  app.get("/checkwishlist", (req, res) => {
+    connection.query("describe wl_product", (_, result) => res.send(result));
+  });
+
+  app.get("/allwl", (req, res) => {
+    connection.query("select * from wl_product", (_, result) => res.send(result));
+  });
+
+  app.get("/deleteallusers", (req, res) => {
+    connection.query("DELETE from client", (err, result) =>
+      connection.query("ALTER TABLE client AUTO_INCREMENT = 1", (e, r) => res.send(r))
+    );
+  });
+  app.get("/deleteallwl", (req, res) => {
+    connection.query("DELETE from wl_product", (err, result) =>
+      connection.query(
+        "alter table wl_product modify id_wishlist int(11) AUTO_INCREMENT PRIMARY KEY",
+        err => res.send(err)
+      )
+    );
+  });
+  app.get("/getproducts", (req, res) => {
+    connection.query("DELETE from wl_product", (err, result) =>
+      connection.query(
+        "alter table wl_product modify id_wishlist int(11) AUTO_INCREMENT PRIMARY KEY",
+        err => res.send(err)
+      )
     );
   });
 };

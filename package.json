@@ -37,7 +37,8 @@
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "pug": "^2.0.3",
-    "sass": "^1.14.3"
+    "sass": "^1.14.3",
+    "sendgrid": "^5.2.3"
   },
   "devDependencies": {
     "node-sass": "^4.9.4",

@@ -11,6 +11,13 @@ app.set("views", path.join(__dirname, "../app/views"));
 app.use(express.static(__dirname + "../public"));
 
 // middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    // to support URL-encoded bodies
+    extended: true
+  })
+);
 module.exports = app;

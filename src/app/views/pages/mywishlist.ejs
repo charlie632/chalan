@@ -23,34 +23,31 @@
     <%- include ../partials/index/header.ejs %>
 
     <div id="wrapper">
-      <!-- Sidebar -->
-
-      <ul class="sidebar navbar-nav">
-        <% for(var i = 0; i < data.menus.length; i++){ %>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= data.menus[i].url %>">
-            <span><%= data.menus[i].name %></span></a
-          >
-        </li>
-
-        <% } %>
-      </ul>
-
       <div id="content-wrapper">
         <div class="container-fluid">
           <!-- Icon Cards -->
-          <h2><%= tienda.toUpperCase() %> - <%= categoria.toUpperCase() %></h2>
+          <h2>My WishList</h2>
+          <h3>
+            Total: <%const calcula_total = () =>{ let total= 0; products.forEach(p => total = total
+            + p.price ); return total} %> $<%= calcula_total()%>
+          </h3>
+          <script></script>
+          <button onclick="mandaMail()">Enviar por mail</button>
           <div class="row">
             <% for(var i = 0; i < products.length; i++){ %>
-            <div class="col col-md-4 col-sm-6" style="margin-bottom: 10px">
+            <div class="col col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 10px">
               <div class="card">
                 <img src="<%= products[i].url%>" alt="Avatar" />
                 <div class="container-card">
                   <h5><b><%= products[i].name %></b></h5>
                   <p>$<%= products[i].price%></p>
                   <div style="margin-left: auto">
-                    <a class="add-wishlist" id="<%= 'prod-' + products[i].id_products %>" href="">
-                      <i class="far fa-star"></i>
+                    <a
+                      class="delete-wishlist"
+                      id="<%= 'prod-' + products[i].id_products %>"
+                      href=""
+                    >
+                      <i class="fas fa-trash-alt"></i>
                     </a>
                   </div>
                 </div>
