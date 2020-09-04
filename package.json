@@ -41,7 +41,7 @@
     "sendgrid": "^5.2.3"
   },
   "devDependencies": {
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.6",
     "reload": "^2.3.1"
   }
